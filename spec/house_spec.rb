@@ -2,8 +2,8 @@ require "./lib/room"
 require "./lib/house"
 require "rspec"
 
-describe House do
-  describe Iteration 2 do
+describe "House" do
+  describe "Iteration 2" do
     before(:each) do
       @house = House.new("$400000", "123 sugar lane")
       @room1 = Room.new(:bedroom, 10, "13")
