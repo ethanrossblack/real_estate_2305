@@ -11,4 +11,7 @@ class House
     @price[1..].to_i
   end
 
+  def add_room(room)
+    @rooms << room if room.is_a?(Room)
+  end
 end
