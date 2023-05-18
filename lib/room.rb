@@ -1,6 +1,10 @@
 class Room
+  attr_reader :category, :length, :width, :painted
 
-  def initialize
-
+  def initialize(category, length, width)
+    @category = category
+    @length = length
+    @width = width
+    @painted = false
   end
 end
