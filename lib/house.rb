@@ -37,4 +37,31 @@ class House
       "address", @address
     ]
   end
+
+  def price_per_square_foot
+    return 0 if area == 0
+
+    (price.to_f / area).round(2)
+  end
+
+  def rooms_sorted_by_area
+    @rooms.sort_by do |room|
+      -room.area
+    end
+  end
+
+  def rooms_by_category
+    rooms_by_category = {}
+
+    @rooms.each do |room|
+      if rooms_by_category[room.category]
+        rooms_by_category[room.category] << room
+      else
+        rooms_by_category[room.category] = []
+        rooms_by_category[room.category] << room
+      end
+    end
+
+    rooms_by_category
+  end
 end
