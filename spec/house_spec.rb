@@ -7,7 +7,7 @@ describe "House" do
     before(:each) do
       @house = House.new("$400000", "123 sugar lane")
       @room1 = Room.new(:bedroom, 10, "13")
-      @room1 = Room.new(:bedroom, 11, "15")
+      @room2 = Room.new(:bedroom, 11, "15")
     end
 
     it "exists" do
@@ -28,8 +28,8 @@ describe "House" do
     end
 
     it "can add rooms" do
-      house.add_room(@room1)
-      house.add_room(@room2)
+      @house.add_room(@room1)
+      @house.add_room(@room2)
 
       expect(@house.rooms).to include(@room1, @room2)
     end
