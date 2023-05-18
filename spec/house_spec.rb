@@ -89,7 +89,7 @@ describe "House" do
       
       @house.add_room(@room3) # @room3.area => 375
       
-      expect(@house.area).to eq(295)
+      expect(@house.area).to eq(670)
 
       @house.add_room(@room4) # @room4.area => 1230
 
