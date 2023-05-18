@@ -31,4 +31,10 @@ class House
     end
   end
 
+  def details
+    Hash[
+      "price", price,
+      "address", @address
+    ]
+  end
 end
