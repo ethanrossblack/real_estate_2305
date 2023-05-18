@@ -17,13 +17,13 @@ describe Room do
     it "it has a length" do
       room = Room.new(:bedroom, 10, "13")
 
-      expect(room.category).to eq(10)
+      expect(room.length).to eq(10)
     end
     
     it "it has a width" do
       room = Room.new(:bedroom, 10, "13")
 
-      expect(room.category).to eq("13")
+      expect(room.width).to eq("13")
     end
 
     it "can get area" do
